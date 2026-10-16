@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { StatusBar, View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 import { Tabs } from 'expo-router';
-import {
-  StatusBar,
-  View,
-  Text,
-  ActivityIndicator,
-  StyleSheet,
-} from 'react-native';
 
 export default function Layout() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Keeps the loading screen visible for 2.5 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
@@ -35,6 +28,7 @@ export default function Layout() {
     <>
       <StatusBar barStyle="light-content" backgroundColor="#2c3e50" />
       <Tabs
+        tabBarPosition="top"
         screenOptions={{
           headerStyle: { backgroundColor: '#2c3e50' },
           headerTintColor: '#ffffff',
@@ -63,6 +57,13 @@ export default function Layout() {
           options={{
             title: 'Contact',
             headerTitle: 'Contact Us',
+          }}
+        />
+        <Tabs.Screen
+          name="explore"
+          options={{
+            title: 'Explore',
+            headerTitle: 'Explore',
           }}
         />
       </Tabs>
