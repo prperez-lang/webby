@@ -132,11 +132,6 @@ export default function Index() {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#2c3e50" />
 
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>TRANSFORM-IMS</Text>
-        <Text style={styles.headerSubtitle}>Metamorphosis Salon & Spa</Text>
-      </View>
-
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.statsContainer}>
           <View style={styles.statCard}>
@@ -314,9 +309,6 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#f4f6f9' },
-  header: { backgroundColor: '#2c3e50', padding: 16, alignItems: 'center' },
-  headerTitle: { color: '#ffffff', fontSize: 20, fontWeight: 'bold' },
-  headerSubtitle: { color: '#bdc3c7', fontSize: 12 },
   scrollContent: { padding: 16 },
   statsContainer: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 16 },
   statCard: { flex: 1, backgroundColor: '#ffffff', padding: 12, borderRadius: 8, marginHorizontal: 4, borderLeftWidth: 4, borderLeftColor: '#3498db' },
